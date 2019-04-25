@@ -2,6 +2,9 @@
   font-family: sans-serif;
 }
 
+.input-text {
+  margin-right: 1rem;
+}
 /** add todo **/
 .add-todo {
   margin-left: 0.5rem;
