@@ -27,3 +27,12 @@ export const getTodosByVisibilityFilter = (store, visibilityFilter) => {
       return allTodos;
   }
 };
+
+const getWeight = (total, currentValue) => {
+  return total + currentValue;
+};
+
+export const getTotalWeight = store => {
+  const allIds = getTodoList(store);
+  return allIds.map(id => getTodoById(store,id).weight).reduce(getWeight, 0);
+};
