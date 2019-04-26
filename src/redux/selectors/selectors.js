@@ -1,4 +1,4 @@
-import { VISIBILITY_FILTERS } from "../constants";
+import { VISIBILITY_FILTERS } from "../../constants";
 
 export const getTodosState = store => store.todos;
 

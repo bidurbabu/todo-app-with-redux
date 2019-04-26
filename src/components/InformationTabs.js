@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getTotalWeight } from "../redux/selectors";
+import { getTotalWeight } from "../redux/selectors/selectors";
 
 const InformationTabs = ({ totalWeight }) => {
     return(
