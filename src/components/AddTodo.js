@@ -25,12 +25,14 @@ class AddTodo extends React.Component {
     return (
       <div>
         <span>Task text</span>
-        <input className="input-text"
+        <input
+          className="input-text"
           onChange={e => this.updateInput(e.target.value)}
           value={this.state.input}
         />
         <span>Weight</span>
-        <input className="input-priority"
+        <input
+          className="input-priority"
           onChange={e => this.updatePriority(e.target.value)}
           value={this.state.weight}
         />
