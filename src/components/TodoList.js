@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Todo from "./Todo";
-import { getTodosByVisibilityFilter } from "../redux/selectors/selectors";
+import { getTodosSorted } from "../redux/selectors/selectors";
 
 
 const TodoList = ({ todos }) => (
@@ -15,10 +15,7 @@ const TodoList = ({ todos }) => (
 );
 
 const mapStateToProps = state => {
-  const { sortByWeight } = state;
-  const todos = getTodosByVisibilityFilter(state);
-
+  const todos = getTodosSorted(state);
   return { todos };
-
 };
 export default connect(mapStateToProps)(TodoList);

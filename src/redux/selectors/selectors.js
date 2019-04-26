@@ -1,4 +1,5 @@
-import { VISIBILITY_FILTERS } from "../../constants";
+import { VISIBILITY_FILTERS, SORT_FILTERS } from "../../constants";
+import sortFilter from "../reducers/sortFilter";
 
 export const getTodosState = store => store.todos;
 
@@ -25,6 +26,21 @@ export const getTodosByVisibilityFilter = (store) => {
       return allTodos;
   }
 };
+
+export const getTodosSorted = (store) => {
+  const todos = getTodosByVisibilityFilter(store);
+  const sortFilter = store.sortFilter;
+  switch (sortFilter) {
+    case SORT_FILTERS.ASCENDING:
+      return todos.sort((a,b) => a.weight - b.weight);
+    case SORT_FILTERS.DESCENDING:
+      return todos.sort((a,b) => b.weight - a.weight);
+    case SORT_FILTERS.NONE:
+    default:
+      return todos;
+  }
+};
+
 
 const getWeight = (total, currentValue) => {
   return total + currentValue;
