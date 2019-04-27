@@ -2,12 +2,13 @@ import { ADD_TODO, TOGGLE_TODO, SET_FILTER, SET_SORT_FILTER } from "./actionType
 
 let nextTodoId = 0;
 
-export const addTodo = ({ input, weight }) => ({
+export const addTodo = ({ input, weight, priority }) => ({
   type: ADD_TODO,
   payload: {
     id: ++nextTodoId,
     content: input,
-    weight: parseInt(weight) || 0
+    weight: parseInt(weight) || 10,
+    priority: parseInt(priority) || 20
   }
 });
 

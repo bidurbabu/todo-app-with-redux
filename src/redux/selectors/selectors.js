@@ -31,11 +31,11 @@ export const getTodosSorted = (store) => {
   const todos = getTodosByVisibilityFilter(store);
   const sortFilter = store.sortFilter;
   switch (sortFilter) {
-    case SORT_FILTERS.ASCENDING:
+    case SORT_FILTERS.PRIORITY:
       return todos.sort((a,b) => a.weight - b.weight);
-    case SORT_FILTERS.DESCENDING:
+    case SORT_FILTERS.WEIGHT:
       return todos.sort((a,b) => b.weight - a.weight);
-    case SORT_FILTERS.NONE:
+    case SORT_FILTERS.ID:
     default:
       return todos;
   }

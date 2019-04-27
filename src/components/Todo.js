@@ -12,7 +12,7 @@ const Todo = ({ todo, toggleTodo }) => (
         todo && todo.completed && "todo-item__text--completed"
       )}
     >
-      {todo.content} : {todo.weight}
+      {todo.id}: {todo.content} : w: {todo.weight} : p: {todo.priority}
     </span>
   </li>
 );

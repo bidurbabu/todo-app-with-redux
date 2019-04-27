@@ -1,7 +1,7 @@
 import { SET_SORT_FILTER } from "../actions/actionTypes";
 import { SORT_FILTERS } from "../../constants";
 
-const initialState = SORT_FILTERS.NONE;
+const initialState = SORT_FILTERS.ID;
 
 const sortFilter = (state = initialState, action) => {
     switch (action.type) {

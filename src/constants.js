@@ -5,7 +5,7 @@ export const VISIBILITY_FILTERS = {
 };
 
 export const SORT_FILTERS = {
-  NONE: "none",
-  ASCENDING: "ascending",
-  DESCENDING: "descending"
+  ID: "id",
+  WEIGHT: "weight",
+  PRIORITY: "priority"
 };
