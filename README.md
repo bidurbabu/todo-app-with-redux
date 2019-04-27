@@ -5,6 +5,9 @@
 - users **react-redux**
 
 ### to do
-- Add Priority to each todo
-- Add weight to each todo.
-- Sort based on priority and weight.
+- Add weight to each todo. : done
+- Sort based on weight. : done
+- Add priority
+- Edit/Delete todo item.
+
+
